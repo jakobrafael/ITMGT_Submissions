@@ -1,0 +1,17 @@
+{% include "header.html" %}
+        <h1>Past Orders</h1>
+      </tr>
+            {% for pastorder in pastorder_list %}
+            <table>
+              <tr>
+                <td> {{ pastorder["code"] }} </td>
+                <td> {{ pastorder["name"] }} </td>
+                <td> {{ pastorder["qty"] }} </td>
+                <td> {{ pastorder["subtotal"] }} </td>
+              </tr>
+              {% endfor %}
+        </table>
+            <div>Thank you for choosing to order with us.</div>
+            <a href="/">Shop for new items.</a>
+
+{% include "footer.html" %}
